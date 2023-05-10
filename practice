@@ -1,0 +1,75 @@
+//1
+var x = 5;
+    
+function setX(newValue) {
+    x = newValue; 
+}
+    
+console.log(x);
+setX(15);
+console.log(x);
+
+//Output: 5, 15
+//2
+var x = 5;
+    
+function addToX(amount) {
+    return x + amount;
+    console.log("hello there");
+}
+    
+console.log(x);
+var result = addToX(-10);
+console.log(result);
+console.log(x);
+//Output: 5,-5,5
+//3
+function isPal(arr) {
+    for(var left=0; left<arr.length/2; left++) {
+                                //3
+        var right = arr.length-1-left;
+        if(arr[left] != arr[right]) {
+            return "Not a pal-indrome!";
+        }
+    }
+    return "Pal-indrome!";
+}
+    
+var result1 = isPal( [1, 1, 2, 2, 1] );
+console.log(result1);
+    
+var result2 = isPal( [3, 2, 1, 1, 2, 3] );
+console.log(result2);
+
+//Output: Not a pal-indrome!, Pal-indrome!
+//4
+var start = 0;
+var end = 12;
+    
+while(start < end) {
+    console.log("start: " + start + ", end: " + end);
+    start += 2;
+    end -= 2;
+}
+// Output: start: 0, end: 12, start: 2, end: 10, start: 4, end: 8,
+//5
+Write a function reverse( arr ) to reverse an array, if we were given...
+
+["a", "b", "c", "d", "e"];
+we expect to get back...
+
+["e", "d", "c", "b", "a"];
+
+function reverse(arr) {
+    var reversed=[];
+    for (var i=arr.length-1; i>=arr.length/2; i--) {
+        var temp=arr[arr.length-1];
+        arr[arr.length-1] = arr[0];
+        arr[0] = temp;
+    }
+    return reversed;
+
+}
+
+var result = reverse([1,2,3,4]);
+console.log(result);
